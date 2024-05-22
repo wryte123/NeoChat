@@ -5,6 +5,7 @@ import { MdPreview } from "md-editor-v3";
 import "md-editor-v3/lib/preview.css";
 
 const app = createApp(App);
+
 app.use(router).component("MdPreview", MdPreview);
 
 app.mount("#app");
