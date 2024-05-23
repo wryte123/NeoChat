@@ -9,8 +9,9 @@
 </template>
 
 <style lang="scss" scoped>
+$primary-color: #fff;
+
 .container {
-  background-color: #fff;
   height: 100vh;
   .header {
     justify-content: center;
