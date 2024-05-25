@@ -1,10 +1,25 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div id="app">
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <a-config-provider :locale="locale">
+      <nav>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link>
+      </nav>
+      <router-view />
+    </a-config-provider>
+  </div>
 </template>
+
+<script setup lang="ts">
+import { ref } from "vue";
+import dayjs from "dayjs";
+import zhCN from "ant-design-vue/es/locale/zh_CN";
+import "dayjs/locale/zh-cn";
+
+const locale = ref(zhCN);
+dayjs.locale("zh-cn");
+</script>
 
 <style lang="scss">
 #app {
