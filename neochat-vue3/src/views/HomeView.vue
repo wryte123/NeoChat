@@ -1,23 +1,19 @@
+<script lang="ts" setup></script>
+
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-
-    <HelloWorld :msg="msg" />
-    <button @click="change">change</button>
+    <h1 class="title">Neo<br />Chat</h1>
   </div>
 </template>
 
-<script lang="ts" setup>
-import { ref } from "vue";
-import HelloWorld from "../components/HelloWorld.vue";
-
-const msg = ref("Hello NeoChat!");
-
-const change = () => {
-  if (msg.value === "Hello NeoChat!") {
-    msg.value = "Hello World!";
-  } else {
-    msg.value = "Hello NeoChat!";
+<style lang="scss" scoped>
+.home{
+  display: flex;
+  justify-content: center;
+  .title{
+    text-align: left;
+    font-size: 3rem;
+    color: #2c3e50;
   }
-};
-</script>
+}
+</style>
